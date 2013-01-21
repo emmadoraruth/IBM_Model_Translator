@@ -1,0 +1,476 @@
+Emma Ziegellaub Eichler - edz2103@columbia.edu
+COMS W4705 - Natural Language Processing
+Programming Assignment 3 Report
+
+4)
+Part 1: To generate t parameters using five iterations of the IBM Model 1 run using native_file and foreign_file, run:
+	"python nlp3.py ibm1 native_file foreign_file"
+Specifically, run:
+	"python nlp3.py ibm1 corpus.en corpus.de"
+To find the 10 most likely translations for each word in words_file, run:
+	"python nlp3.py translations words_file"
+Specifically, run:
+ 	"python nlp3.py translations devwords.txt"
+The possible translations will be written to 'translations.txt'.
+To find the maximum likelihood alignments for the first 20 sentences in foreign_file and native_file, run:
+	"python nlp3.py alignments native_file foreign_file 1"
+Specifically, run:
+	"python nlp3.py alignments corpus.en corpus.de 1"
+The alignments will be written to 'alignments1.txt'.
+
+Part 2: This generates the following 'translations.txt':
+
+i:
+ich 0.698157206001
+, 0.0732658483783
+. 0.0367765054262
+m&ouml;chte 0.0295663458318
+da&szlig; 0.0265334632992
+habe 0.0252761066229
+mich 0.0134028907732
+mir 0.0085142540282
+die 0.0067581536235
+zu 0.00635410882566
+
+dog:
+&uuml;bersetzen 0.0726134624466
+delendum 0.0726134624466
+cato 0.0726134624466
+postalis 0.0726134624466
+k&uuml;chenlatein 0.0726134624466
+servitium 0.0726134624466
+esse 0.0726134624466
+stehen 0.0725171672317
+darf 0.072158851976
+jetzt 0.0703620893106
+
+man:
+mann 0.269404176773
+mensch 0.113999490854
+wie 0.0950778420384
+ehrenwerter 0.0454647084929
+wortwahl 0.0454647084929
+, 0.0266071114792
+man 0.025734134274
+ein 0.0207849404585
+mu&szlig; 0.0205166314632
+reagiert 0.0143064137688
+
+keys:
+herr 0.0560548692919
+faktors 0.0514373171477
+33 0.0514373171088
+steuerliche 0.0514373170998
+verringert 0.0514373169066
+belastung 0.0514373152622
+sch&ouml;n 0.0514373120451
+cassidy 0.0514346908478
+durchgef&uuml;hrt 0.0514344453003
+punkt 0.0513138817195
+
+bill:
+rechnung 0.164040819625
+hotelrechnung 0.0802992010516
+sitzungswoche 0.0802992010023
+pr&auml;sentiert 0.0802162853919
+gegen&uuml;ber 0.0777756440154
+mir 0.0669550670991
+einem 0.0545131851883
+nur 0.0429504198939
+unzureichendes 0.0279592696061
+bezahlt 0.027874503485
+
+naming:
+soll 0.155726960064
+erw&auml;hnung 0.136034049376
+meinen 0.131682851027
+herstellernamens 0.0730628043657
+gedacht 0.0730625052013
+erg&auml;nzung 0.0723200015858
+beunruhigt 0.0357332036127
+erscheinen 0.0357330984811
+tatsache 0.0356276549966
+berichterstatterin 0.034964878234
+
+anxiety:
+besorgnis 0.119075245213
+ausdruck 0.0899171552173
+st&auml;rker 0.0791463131213
+strecke 0.0645054908662
+existiert 0.0645052664597
+angst 0.0644989241302
+bleiben 0.0616029922109
+zunehmen 0.0544199894436
+saal 0.0472102539164
+liegt 0.0460432408109
+
+junta:
+milit&auml;rjunta 0.406333227424
+junta 0.25579889992
+hatte 0.0247189171141
+festgenommen 0.0229468167937
+der 0.0223181519065
+herrschenden 0.0194783643187
+die 0.0180675305478
+man 0.0155257899876
+&ouml;lvorr&auml;te 0.0111235369085
+bedeute 0.0111235369085
+
+mediator:
+vermittler 0.204910428436
+ansonsten 0.067880863392
+einzig 0.0678322814399
+betrachten 0.0677476900868
+m&ouml;glichen 0.0627991612893
+dorthin 0.0621103874464
+stellen 0.0601181136489
+spricht 0.0532995985114
+entsandt 0.0532528412238
+t&auml;glich 0.0490989652612
+
+tribunal:
+gerichtshof 0.192169414198
+kriegsgericht 0.124445284187
+tribunal 0.0718816168737
+gab 0.0702069114134
+ein 0.0617926423414
+dem 0.0352331224453
+internationalen 0.0292221195588
+uneingeschr&auml;nkt 0.0268793652342
+g&uuml;ltig 0.0268597861464
+daher 0.0205227774381
+
+anniversary:
+jahrestag 0.352441651689
+zehnten 0.119488134064
+um 0.0664517887246
+redet 0.0303206873603
+so 0.0291452870234
+alleine 0.0291427636842
+manche 0.0291227359173
+am 0.0277571863999
+gar 0.0264841137756
+zehnj&auml;hrige 0.0246043597527
+
+dimension:
+dimension 0.670483598321
+der 0.0215602923904
+die 0.0193958908539
+besch&auml;ftigungsinitiative 0.0184016779907
+sozialfonds 0.0170815914062
+folglich 0.0163748220154
+geboten 0.0160938899008
+erscheint 0.0155522901516
+wichtiger 0.0140119047368
+wichtiges 0.010597519202
+
+depicted:
+wieder 0.198059949298
+immer 0.19742281515
+differenzierten 0.0504598813721
+holzschnittartig 0.0504598813721
+differenzierter 0.0504598813721
+ansonsten 0.0504598600247
+gef&auml;llt 0.0504591944158
+dargestellt 0.0504534791055
+gut 0.0489909044947
+zeichnet 0.043629990353
+
+prefers:
+beibeh&auml;lt 0.06078906617
+seiner 0.0602363874422
+akzeptieren 0.0601283934961
+verfahren 0.0562202384365
+wahl 0.0442958484198
+&auml;hnliche 0.0428627453947
+spezifischen 0.0428625481723
+inhaltlich 0.0428619782246
+standpunkte 0.0428616994178
+kompromi&szlig; 0.0428610018207
+
+visa:
+l&auml;nder 0.050159154585
+visum- 0.0427811264026
+fl&uuml;chtlingspolitik 0.0427811264026
+visumpflicht 0.0427811264026
+erweiterte 0.0427811262987
+versch&auml;rft 0.0427372018436
+wird 0.0358528868309
+visumbestimmungen 0.0358028709678
+harmonisiert 0.0358028637113
+einreise 0.035802843476
+
+wood:
+viel 0.0835801170799
+w&auml;ldern 0.0779274001556
+holz 0.0779274001556
+abfallholz 0.0779274001556
+finnischen 0.0779273052756
+nutzt 0.0779270260029
+liegen 0.0778260262257
+; 0.0727984950352
+riesige 0.0691224818233
+wald 0.0639626936339
+
+agent:
+verringern 0.155353959992
+ber&uuml;hrung 0.114624119064
+kommen 0.11286628466
+sind 0.0391470628513
+erreger 0.0329134944714
+ausschlie&szlig;t 0.0329133326961
+gef&auml;hrdung 0.0329132012793
+lie&szlig;e 0.0329112547577
+gekommen 0.0328965689637
+wahrscheinlich 0.0318493485425
+
+consume:
+viel 0.0876442802836
+energie 0.0745986618664
+uns 0.0735259543283
+verbrauchen 0.0628867515608
+verbraucht 0.0530638717266
+papierindustrie 0.0265485845596
+heizen 0.0265485845596
+f&uuml;rs 0.0265485830867
+schwerpunkt 0.0265470558342
+nordischen 0.026537856584
+
+everyday:
+normalerweise 0.108922961997
+funktioniert 0.108603222475
+alltags 0.108308122616
+hinaus 0.108158501997
+zolls 0.107842159134
+drogenbek&auml;mpfung 0.106533523359
+dar&uuml;ber 0.10402096259
+des 0.0930794955594
+gef&auml;ngnisstrafe 0.0332412182358
+normalen 0.0332412093988
+
+fix:
+bescheinigen 0.0925374608668
+festlegen 0.0925373605777
+gegeben 0.0827795230656
+einen 0.061597396754
+abhaltung 0.0423314089092
+abgekartete 0.0397410023157
+nur-englisch 0.0397410023157
+zeitalter 0.0397410022585
+schnelle 0.0397409998503
+aufgeben 0.0397409967072
+
+ocean:
+tropfen 0.171518584251
+stein 0.171518584251
+hei&szlig;en 0.171492502506
+dar&uuml;ber 0.0901321363763
+klaren 0.0836088633185
+uns 0.0311626644641
+m&uuml;ssen 0.0311370987888
+sind 0.0302515439137
+sein 0.0301032653582
+auf 0.0287133092064
+
+and the following 'alignments1.txt':
+
+resumption of the session
+wiederaufnahme der sitzungsperiode
+[1, 2, 4]
+
+i declare resumed the session of the european parliament adjourned on thursday , 28 march 1996 .
+ich erkl&auml;re die am donnerstag , den 28. m&auml;rz 1996 unterbrochene sitzungsperiode des europ&auml;ischen parlaments f&uuml;r wiederaufgenommen .
+[1, 2, 4, 12, 12, 13, 4, 14, 15, 16, 2, 5, 10, 8, 9, 2, 3, 17]
+
+welcome
+begr&uuml;&szlig;ung
+[1]
+
+i bid you a warm welcome !
+herzlich willkommen !
+[5, 2, 7]
+
+approval of the minutes
+genehmigung des protokolls
+[1, 1, 1]
+
+the minutes of the sitting of thursday , 28 march 1996 have been distributed .
+das protokoll der sitzung vom donnerstag , den 28. m&auml;rz 1996 wurde verteilt .
+[2, 2, 3, 5, 10, 7, 8, 1, 9, 10, 11, 14, 14, 15]
+
+are there any comments ?
+gibt es einw&auml;nde ?
+[2, 2, 4, 5]
+
+points 16 and 17 now contradict one another whereas the voting showed otherwise .
+die punkte 16 und 17 widersprechen sich jetzt , obwohl es bei der abstimmung anders aussah .
+[10, 1, 2, 3, 4, 6, 9, 5, 14, 6, 6, 4, 10, 11, 6, 6, 14]
+
+i shall be passing on to you some comments which you could perhaps take up with regard to the voting .
+ich werde ihnen die entsprechenden anmerkungen aush&auml;ndigen , damit sie das eventuell bei der abstimmung &uuml;bernehmen k&ouml;nnen .
+[1, 2, 7, 19, 4, 9, 4, 10, 20, 7, 0, 4, 17, 19, 20, 4, 12, 21]
+
+i will have to look into that , mrs oomen-ruijten .
+das mu&szlig; ich erst einmal kl&auml;ren , frau oomen-ruijten .
+[7, 5, 1, 10, 5, 10, 8, 9, 10, 11]
+
+i cannot say anything at this stage .
+das kann ich so aus dem stand nicht sagen .
+[6, 2, 1, 4, 4, 7, 7, 2, 3, 8]
+
+we will consider the matter .
+wir werden das &uuml;berpr&uuml;fen .
+[1, 2, 0, 3, 6]
+
+mr president , it concerns the speech made last week by mr fischler on bse and reported in the minutes .
+es geht um die erkl&auml;rung von herrn fischler zu bse , die im protokoll festgehalten wurde .
+[4, 13, 17, 6, 17, 11, 1, 13, 14, 15, 3, 6, 18, 20, 17, 9, 21]
+
+perhaps the commission or you could clarify a point for me .
+vielleicht k&ouml;nnten die kommission oder sie mir einen punkt erl&auml;utern .
+[1, 6, 2, 3, 4, 5, 11, 8, 9, 7, 12]
+
+it would appear that a speech made at the weekend by mr fischler indicates a change of his position .
+offensichtlich bedeutet die erkl&auml;rung von herrn fischler vom wochenende eine &auml;nderung der haltung der kommission .
+[3, 13, 9, 10, 11, 12, 13, 3, 10, 5, 16, 17, 19, 17, 10, 20]
+
+i welcome this change because he has said that he will eat british beef and that the ban was imposed specifically for economic and political reasons .
+ich begr&uuml;&szlig;e diese &auml;nderung , denn er sagte , da&szlig; er britisches rindfleisch essen w&uuml;rde und da&szlig; das einfuhrverbot insbesondere aus wirtschaftlichen und politischen gr&uuml;nden verh&auml;ngt wurde .
+[1, 2, 3, 4, 9, 5, 6, 8, 9, 9, 6, 12, 14, 12, 12, 15, 9, 18, 12, 21, 26, 23, 15, 25, 26, 12, 19, 27]
+
+could somebody clarify that he has actually said this please , mr president , because it is a change of views .
+herr pr&auml;sident , k&ouml;nnte festgestellt werden , ob er das tats&auml;chlich gesagt hat , denn das w&uuml;rde eine &auml;nderung der haltung der kommission bedeuten .
+[12, 13, 11, 1, 2, 2, 11, 2, 5, 17, 7, 8, 6, 11, 15, 17, 2, 18, 19, 20, 2, 20, 2, 2, 22]
+
+mr sturdy , i cannot see what that has to do with the minutes .
+herr kollege , ich kann nicht erkennen , was das mit dem protokoll zu tun hat .
+[1, 2, 3, 4, 5, 5, 2, 3, 7, 14, 12, 12, 14, 10, 11, 9, 15]
+
+mr president , on exactly the same point as mr sturdy has raised .
+herr pr&auml;sident , zum gleichen punkt , den auch herr sturdy angesprochen hat .
+[1, 2, 3, 11, 7, 8, 3, 6, 11, 1, 11, 13, 12, 14]
+
+if commission fischler has made this statement , then he has said that it is not a matter of public health .
+wenn herr kommissar fischler diese erkl&auml;rung abgegeben hat , dann bedeutet dies , da&szlig; es sich nicht um eine angelegenheit der &ouml;ffentlichen gesundheit handelt .
+[1, 7, 3, 3, 6, 7, 7, 4, 8, 9, 3, 6, 8, 13, 14, 4, 16, 18, 17, 18, 19, 20, 21, 3, 22]
+
+Part 3:
+My alignments correspond exactly to those in the sample output file provided for IBM Model 1.
+
+Part 4:
+The t parameters are stored a hash of hashes, where the outer hash corresponds to an English (or more generally, a native word) and the inner hash corresponds to all possible German (or more generally, foreign) translations and their conditional probabilities.  This allows us to efficiently access all possible translations for a given English/native word without having to iterate through all possible English/German (native/foreign) pairs.  'ibm1' creates two files to store the t parameters ('tparams.txt') and foreign words ('foreign_words.txt') so that they will only be be regenerated when running 'alignments' or 'translations' if they do not already exist.
+
+5) Part 1: To generate t and q parameters using five iterations of the IBM Model 2 (with the t parameters initialized using ten iterations of the IBM Model 1) using native_file and foreign_file, run:
+	"python nlp3.py ibm2 native_file foreign_file"
+Specifically, run:
+	"python nlp3.py ibm2 corpus.en corpus.de"
+To find the maximum likelihood alignments for the first 20 sentences in foreign_file and native_file, run:
+	"python nlp3.py alignments native_file foreign_file 2"
+Specifically, run:
+	"python nlp3.py alignments corpus.en corpus.de 2"
+The alignments will be written to 'alignments2.txt'.
+
+Part 2: This generates the following 'alignments2.txt':
+
+resumption of the session
+wiederaufnahme der sitzungsperiode
+[1, 2, 4]
+
+i declare resumed the session of the european parliament adjourned on thursday , 28 march 1996 .
+ich erkl&auml;re die am donnerstag , den 28. m&auml;rz 1996 unterbrochene sitzungsperiode des europ&auml;ischen parlaments f&uuml;r wiederaufgenommen .
+[1, 2, 4, 12, 12, 13, 4, 14, 15, 16, 2, 5, 10, 8, 9, 2, 3, 17]
+
+welcome
+begr&uuml;&szlig;ung
+[1]
+
+i bid you a warm welcome !
+herzlich willkommen !
+[5, 2, 7]
+
+approval of the minutes
+genehmigung des protokolls
+[1, 1, 1]
+
+the minutes of the sitting of thursday , 28 march 1996 have been distributed .
+das protokoll der sitzung vom donnerstag , den 28. m&auml;rz 1996 wurde verteilt .
+[2, 2, 3, 5, 10, 7, 8, 1, 9, 10, 11, 14, 14, 15]
+
+are there any comments ?
+gibt es einw&auml;nde ?
+[2, 2, 4, 5]
+
+points 16 and 17 now contradict one another whereas the voting showed otherwise .
+die punkte 16 und 17 widersprechen sich jetzt , obwohl es bei der abstimmung anders aussah .
+[10, 1, 2, 3, 4, 6, 9, 5, 0, 6, 12, 4, 10, 11, 6, 6, 14]
+
+i shall be passing on to you some comments which you could perhaps take up with regard to the voting .
+ich werde ihnen die entsprechenden anmerkungen aush&auml;ndigen , damit sie das eventuell bei der abstimmung &uuml;bernehmen k&ouml;nnen .
+[1, 2, 7, 19, 4, 9, 4, 10, 20, 7, 0, 4, 17, 19, 20, 4, 12, 21]
+
+i will have to look into that , mrs oomen-ruijten .
+das mu&szlig; ich erst einmal kl&auml;ren , frau oomen-ruijten .
+[7, 10, 1, 10, 5, 10, 8, 9, 10, 11]
+
+i cannot say anything at this stage .
+das kann ich so aus dem stand nicht sagen .
+[6, 2, 1, 4, 4, 4, 7, 2, 3, 8]
+
+we will consider the matter .
+wir werden das &uuml;berpr&uuml;fen .
+[1, 2, 0, 3, 6]
+
+mr president , it concerns the speech made last week by mr fischler on bse and reported in the minutes .
+es geht um die erkl&auml;rung von herrn fischler zu bse , die im protokoll festgehalten wurde .
+[4, 13, 17, 6, 17, 11, 1, 13, 14, 15, 3, 6, 18, 20, 17, 9, 21]
+
+perhaps the commission or you could clarify a point for me .
+vielleicht k&ouml;nnten die kommission oder sie mir einen punkt erl&auml;utern .
+[1, 6, 2, 3, 4, 5, 11, 8, 9, 7, 12]
+
+it would appear that a speech made at the weekend by mr fischler indicates a change of his position .
+offensichtlich bedeutet die erkl&auml;rung von herrn fischler vom wochenende eine &auml;nderung der haltung der kommission .
+[3, 13, 9, 10, 11, 12, 13, 3, 10, 5, 16, 17, 19, 17, 10, 20]
+
+i welcome this change because he has said that he will eat british beef and that the ban was imposed specifically for economic and political reasons .
+ich begr&uuml;&szlig;e diese &auml;nderung , denn er sagte , da&szlig; er britisches rindfleisch essen w&uuml;rde und da&szlig; das einfuhrverbot insbesondere aus wirtschaftlichen und politischen gr&uuml;nden verh&auml;ngt wurde .
+[1, 2, 3, 4, 9, 5, 6, 8, 9, 9, 6, 12, 14, 12, 12, 15, 9, 18, 12, 21, 26, 23, 15, 25, 26, 12, 19, 27]
+
+could somebody clarify that he has actually said this please , mr president , because it is a change of views .
+herr pr&auml;sident , k&ouml;nnte festgestellt werden , ob er das tats&auml;chlich gesagt hat , denn das w&uuml;rde eine &auml;nderung der haltung der kommission bedeuten .
+[12, 13, 11, 1, 2, 2, 11, 2, 5, 17, 7, 8, 6, 11, 15, 17, 2, 18, 19, 20, 2, 20, 2, 2, 22]
+
+mr sturdy , i cannot see what that has to do with the minutes .
+herr kollege , ich kann nicht erkennen , was das mit dem protokoll zu tun hat .
+[1, 2, 3, 4, 5, 5, 2, 3, 7, 14, 12, 12, 14, 10, 11, 9, 15]
+
+mr president , on exactly the same point as mr sturdy has raised .
+herr pr&auml;sident , zum gleichen punkt , den auch herr sturdy angesprochen hat .
+[1, 2, 3, 11, 7, 8, 3, 6, 7, 1, 11, 13, 12, 14]
+
+if commission fischler has made this statement , then he has said that it is not a matter of public health .
+wenn herr kommissar fischler diese erkl&auml;rung abgegeben hat , dann bedeutet dies , da&szlig; es sich nicht um eine angelegenheit der &ouml;ffentlichen gesundheit handelt .
+[1, 7, 3, 3, 6, 7, 7, 4, 8, 9, 3, 6, 8, 13, 14, 4, 16, 18, 17, 18, 19, 20, 21, 3, 22]
+
+Part 3:
+My alignments correspond exactly to those in the sample output file provided.
+
+Part 4:
+The t parameters are stored a hash of hashes, as described in question (4).  The q parameters are similarly stored in a hash of hashes, where the outer hash corresponds to a a pair of English/German (or, more generally, native/foreign) sentence lengths and the inner hash corresponds to English/German (or native/foreign) alignments and the conditional probability of the English/native index given the German/foreign index and sentence lengths.  This allows us to efficiently access all possible alignments for a given pair of sentence lengths without having to iterate through all possible sentence length pairs.  'ibm2' creates three files to store the t parameters ('tparams.txt'), q parameters ('qparams.txt'), and foreign words ('foreign_words.txt') so that they will only be be regenerated when running 'alignments' or 'unscramble' (part (6)) if they do not already exist.
+
+6) Part 1: To unscramble the sentences in the native language in the file specified by 'scrambled' to correspond to the sentences in the foreign language in the file specified by 'original' using the parameters from IBM Model 2, run:
+	"python nlp3.py unscramble scrambled original"
+Specifically, run:
+	"python nlp3.py unscramble scrambled.en original.de"
+The output will be written to 'unscrambled.en'.
+
+Part 2:
+The evaluation script gives the following results on 'unscrambled.en':
+Right	Total	Acc
+88	100	0.880
+
+Part 3:
+With 88% accuracy at unscrambling the native file given its foreign translation in the original order, the IBM 2 Model using the IBM 1 Model for initialization has high accuracy.  Assuming the parameters of the model have already been generated, 'unscramble' runs in time quadratic in n, where n is the number of sentences in one of the files (both files have the same number of sentences), linear in m_max, where m_max is the length of the longest foreign (German) sentence, and linear in l_max, where l_max is the length of the longest native (English) sentence: O(n*m_max*l_max).
+
+Part 4:
+Since this part no longer uses the training corpus, accommodations had to be made for pairs of sentence lengths, native words, and foreign words not in the training corpus.  Unseen sentence length pairs were assigned q parameter 0 for all possible alignments.  t(f|e) = 10^-18 if both f and e were unseen, and t(f|e) = 10^19 if only one of f or e was unseen.
